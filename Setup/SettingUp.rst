@@ -20,6 +20,10 @@ Package installation
 	
 .. Note:: If pip isn’t installed, you can get it `here <https://packaging.python.org/installing/#install-pip-setuptools-and-wheel>`_!
 
+Upgrade existing installation::
+
+	pip install GISPython --Upgrade
+
 Configuration & basic usage
 ---------------------------
 	
@@ -51,6 +55,16 @@ Extensions healpful for developing GEOPythonCore:
 
 GEOPythonCore module sippet can be added to Visual Studio Core Python snippets to quickly create new modules `GEOPythonModuleSnippet.json <GEOPythonModuleSnippet.json>`_
 
+Usefull settings::
+
+	"files.exclude": {
+        "**/*.pyc": true,
+        "**/on.LST": true
+    },
+    "files.associations": {
+        "*.pyt": "python"
+    },
+    "files.autoGuessEncoding": true
 
 Usful links
 -------------
