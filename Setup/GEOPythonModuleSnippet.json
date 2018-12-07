@@ -1,4 +1,5 @@
 {
+
     "GEOPythonCore Module":
     {
         "prefix": "geomod",
@@ -40,5 +41,58 @@
         ""
         ],
         "description": "GEOPythonCore module snippet"
+    },
+
+
+    "GEOPython Toolbox":
+    {
+        "prefix": "geotpy",
+        "body": [
+        "# -*- coding: utf-8 -*-", 
+        "'''",
+        "    ${1:Toolbox purpose}", 
+        "'''",
+        "from  GISPython import GISPythonTool",
+        "",
+        "import ${6:sampleGISPythonModule} # import corresponding GEOPython modules",
+        "",
+        "class Toolbox(object):",
+        "    \"\"\"",
+        "        Toolbox itself",
+        "    \"\"\"",
+        "    def __init__(self):",
+        "        self.label = \"${2:Toolbox label}\"",
+        "        self.alias = \"${3:Toolbox alias}\"",
+        "",
+        "        # List of tool classes associated with this toolbox",
+        "        self.tools = [sapmleToll]",
+        "        ",
+        "class sapmleToll(GISPythonTool.GISPythonTool):",
+        "    def __init__(self):",
+        "        \"\"\"Define tool (tool name is the class name)\"\"\"",
+        "        self.label = u\"${4:Tool label}\"",
+        "        self.description = u\"${5:Tool description}\"",
+        "",
+        "    def execute(self, parameters, messages):",
+        "        \"\"\"Tool execution\"\"\"",
+        "        ${6:sampleGISPythonModule}.MainModule().DoJob()",
+        "        return",
+        ""
+        ],
+        "description": "GEOPythonCore toolbox snippet"
+    },
+
+    "GEOPython TMP folder":
+    {
+        "prefix": "geotmp",
+        "body": [
+            "",
+            "DH = SimpleFileOpsSafe.SimpleFileOpsSafe(Tool)",
+            "tmp_folder = pj(Pr.TmpFolder, self.modulename)",
+            "DH.CheckCreateDir(tmp_folder)",
+            "DH.ClearDir(tmp_folder)",
+        ""
+        ],
+        "description": "GEOPythonCore typical temp folder"
     }
 }
